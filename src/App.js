@@ -1,25 +1,57 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import ReactDOM from "react-dom";
+import { Button } from "./components/Button";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Button
+        // onClick={() => {
+        //   console.log("you clicked on me ");
+        // }}
+        type="Button"
+        buttonStyle="btn--success--solid"
+        buttonSize="btn--large"
+      >
+        {" "}
+        Large{" "}
+      </Button>
+
+      <Button
+        // testing
+
+        // onClick={() => {
+        //   console.log("you clicked on me ");
+        // }}
+        type="Button"
+        buttonStyle="hfjfjfhfh"
+        buttonSize="btn--medium"
+      >
+        {" "}
+        medium{" "}
+      </Button>
+
+      <Button
+        // onClick={() => {
+        //   console.log("you clicked on me ");
+        // }}
+        type="Button"
+        buttonStyle="btn--danger--solid"
+        buttonSize="btn--small"
+      >
+        {" "}
+        small{" "}
+      </Button>
+    </>
   );
 }
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
 
 export default App;
